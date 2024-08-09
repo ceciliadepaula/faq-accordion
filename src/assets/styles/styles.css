@@ -3,6 +3,23 @@
 /* COLORS */
 body {
   font-family: "Work Sans", sans-serif;
+  background-color: hsl(275, 100%, 97%);
+  padding: 0;
+  margin: 0;
+}
+
+.background {
+  width: 100svw;
+  max-height: -moz-fit-content;
+  max-height: fit-content;
+  position: fixed;
+  top: 0;
+  z-index: -1;
+}
+.background img {
+  width: 100svw;
+  height: -moz-max-content;
+  height: max-content;
 }
 
 p {
@@ -19,4 +36,44 @@ p {
 
 .bold {
   font-weight: 700;
+}
+
+.border-red {
+  border: red solid 1px;
+}
+
+.d-none {
+  display: none;
+}
+
+.accordion-item {
+  background-color: hsl(0, 0%, 100%);
+}
+.accordion-item .accordion-question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.4rem 0;
+  cursor: pointer;
+  border-top: 1px solid hsl(275, 100%, 97%);
+}
+.accordion-item .accordion-question h2.question {
+  margin: 0;
+  padding: 0;
+  font-size: 1.1rem;
+  color: hsl(292, 42%, 14%);
+}
+.accordion-item .accordion-question .collapse-button {
+  height: 31px;
+}
+.accordion-item .accordion-answer p.answer {
+  color: hsl(292, 16%, 49%);
+  line-height: 1.45;
+  font-size: 1rem;
+  padding: 0 0 1.4rem 0;
+  margin: 0;
+}
+
+.accordion-item:nth-child(1) .accordion-question {
+  border-top: 0px;
 }/*# sourceMappingURL=styles.css.map */
