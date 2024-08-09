@@ -15,12 +15,18 @@ function AccordionItem(props) {
                     <h2 className='question'>{props.question}</h2>
                     <div className="collapse-button">
                         <img 
-                            src={isOpen ? IconMinus : IconPlus} 
-                            alt={isOpen ? "Close question" : "Open question"} 
+                        src={IconPlus} 
+                        alt="Open question" 
+                        className={`icon ${!isOpen ? 'visible' : 'hidden'}`} 
+                        />
+                        <img 
+                        src={IconMinus} 
+                        alt="Close question" 
+                        className={`icon ${isOpen ? 'visible' : 'hidden'}`} 
                         />
                     </div>
                 </div>
-                <div className={`accordion-answer ${isOpen ? '' : 'd-none'}`}>
+                <div className={`accordion-answer ${isOpen ? 'open' : 'close'}`}>
                     <p className='answer'>{props.answer}</p>
                 </div>
             </div>
