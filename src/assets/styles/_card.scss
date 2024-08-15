@@ -1,0 +1,40 @@
+.card-container{
+    max-width: 600px;
+    margin: 0 2rem;
+    padding: 1rem 2rem 0.5rem;
+    background-color: $white;
+    border-radius: 8px;
+    box-shadow: $shadow;
+    div.title{
+        display: flex;
+        h1{
+            color: $dark-purple;
+            margin: 0.5rem 0;
+        }
+        img{
+            width: 24px;
+            margin-right: 1.5rem;
+        }
+    }
+}
+
+.accordion-container{
+    height: 100svh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (min-width: 1440px){
+    .card-container{
+        div.title{
+            h1{
+                font-size: 3.2rem;
+            }
+            img{
+                width: 34px;
+                margin-right: 1.5rem;
+            }
+        }
+    }
+}

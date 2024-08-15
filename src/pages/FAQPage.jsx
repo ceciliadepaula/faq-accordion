@@ -1,13 +1,29 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { faqs }  from '../pages/questions.js';
 import useWindowWidth from '../utils/useWindowWidth.js';
 import BackMobile from '../assets/images/background-pattern-mobile.svg';
 import BackDesktop from '../assets/images/background-pattern-desktop.svg';
-
+import Card from '../components/atoms/Card.jsx';
 import AccordionItem from '../components/atoms/AccordionItem.jsx';
 
 function FAQPage() {
     const windowWidth = useWindowWidth();
     const backgroundImage = windowWidth <= 1000 ? BackMobile : BackDesktop;
+    const [openIndex, setOpenIndex] = useState(null);
+
+    const toggleAccordion = (index) => {
+        setOpenIndex(openIndex === index ? null : index);
+    };
+
+    const accordionItems = faqs.map((faq, index) => (
+        <AccordionItem 
+            key={index}
+            question={faq.question}
+            answer={faq.answer}
+            isOpen={openIndex === index}
+            onClick={() => toggleAccordion(index)}
+        />
+    ));
 
     return (
         <>
@@ -17,17 +33,10 @@ function FAQPage() {
                 alt="Background Pattern" 
                 />
             </div>
-
-
             <div className="accordion-container">
-                <AccordionItem 
-                question="What is Frontend Mentor, and how will it help me? "
-                answer="Respuesta orem ipsum dolor sit amet, consecte orem ipsum dolor sit amet, consecteFrontend Mentor offers realistic coding challenges to help developers improve their frontend coding skills with projects in HTML, CSS, and JavaScript. It's suitable for all levels and ideal for portfolio building."
-                />
-
-                <AccordionItem 
-                question="What is Frontend Mentor, and how will it help me? "
-                answer="Respuesta orem ipsum dolor sit amet, consecte orem ipsum dolor sit amet, consecteFrontend Mentor offers realistic coding challenges to help developers improve their frontend coding skills with projects in HTML, CSS, and JavaScript. It's suitable for all levels and ideal for portfolio building."
+                <Card
+                title="FAQs"
+                content={accordionItems}
                 />
             </div>
         </>

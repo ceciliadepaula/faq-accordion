@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
 /* FONTS */
 /* COLORS */
+/* SHADOW */
 body {
   font-family: "Work Sans", sans-serif;
   background-color: hsl(275, 100%, 97%);
@@ -52,9 +53,6 @@ p {
 
 .accordion-item {
   background-color: hsl(0, 0%, 100%);
-  /* position: relative;
-  height: max-content;
-  width: 100%; */
 }
 .accordion-item .accordion-question {
   display: flex;
@@ -73,15 +71,18 @@ p {
 .accordion-item .accordion-question .collapse-button {
   height: 31px;
   width: 30px;
+  min-width: 30px;
+  min-height: 30px;
   position: relative;
+  margin-left: 0.5rem;
 }
 .accordion-item .accordion-question .collapse-button .icon {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
   transition: opacity 0.2s ease-in;
+  height: 100%;
+  width: 100%;
 }
 .accordion-item .accordion-question .collapse-button .icon.hidden {
   opacity: 0;
@@ -89,10 +90,13 @@ p {
 .accordion-item .accordion-question .collapse-button .icon.visible {
   opacity: 1;
 }
+.accordion-item .accordion-question:hover h2.question {
+  color: #AD28EB;
+}
 .accordion-item .accordion-answer {
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.5s ease-in-out;
+  transition: max-height 0.7s ease-in-out;
 }
 .accordion-item .accordion-answer p.answer {
   color: hsl(292, 16%, 49%);
@@ -110,4 +114,41 @@ p {
 
 .accordion-item:nth-child(1) .accordion-question {
   border-top: 0px;
+}
+
+.card-container {
+  max-width: 600px;
+  margin: 0 2rem;
+  padding: 1rem 2rem 0.5rem;
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 8px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+.card-container div.title {
+  display: flex;
+}
+.card-container div.title h1 {
+  color: hsl(292, 42%, 14%);
+  margin: 0.5rem 0;
+}
+.card-container div.title img {
+  width: 24px;
+  margin-right: 1.5rem;
+}
+
+.accordion-container {
+  height: 100svh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (min-width: 1440px) {
+  .card-container div.title h1 {
+    font-size: 3.2rem;
+  }
+  .card-container div.title img {
+    width: 34px;
+    margin-right: 1.5rem;
+  }
 }/*# sourceMappingURL=styles.css.map */
