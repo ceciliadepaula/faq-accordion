@@ -9,10 +9,10 @@ import AccordionItem from '../components/atoms/AccordionItem.jsx';
 function FAQPage() {
     const windowWidth = useWindowWidth();
     const backgroundImage = windowWidth <= 1000 ? BackMobile : BackDesktop;
-    const [openIndex, setOpenIndex] = useState(null);
+    const [openIndex, setOpenIndex] = useState(0);
 
     const toggleAccordion = (index) => {
-        setOpenIndex(openIndex === index ? null : index);
+        setOpenIndex(openIndex === index ? -1 : index);
     };
 
     const accordionItems = faqs.map((faq, index) => (
