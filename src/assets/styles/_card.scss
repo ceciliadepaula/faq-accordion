@@ -1,9 +1,9 @@
 .card-container{
     max-width: 520px;
     margin: 0 2rem;
-    padding: 1rem 2rem 0.5rem;
+    padding: 2rem 2.5rem 1rem;
     background-color: $white;
-    border-radius: 8px;
+    border-radius: 1rem;
     box-shadow: $shadow;
     div.title{
         display: flex;
@@ -29,10 +29,10 @@
     .card-container{
         div.title{
             h1{
-                font-size: 3.2rem;
+                font-size: 3.5rem;
             }
             img{
-                width: 34px;
+                width: 40px;
                 margin-right: 1.5rem;
             }
         }

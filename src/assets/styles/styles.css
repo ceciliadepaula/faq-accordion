@@ -119,9 +119,9 @@ p {
 .card-container {
   max-width: 520px;
   margin: 0 2rem;
-  padding: 1rem 2rem 0.5rem;
+  padding: 2rem 2.5rem 1rem;
   background-color: hsl(0, 0%, 100%);
-  border-radius: 8px;
+  border-radius: 1rem;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
 }
 .card-container div.title {
@@ -145,10 +145,10 @@ p {
 
 @media screen and (min-width: 1440px) {
   .card-container div.title h1 {
-    font-size: 3.2rem;
+    font-size: 3.5rem;
   }
   .card-container div.title img {
-    width: 34px;
+    width: 40px;
     margin-right: 1.5rem;
   }
 }/*# sourceMappingURL=styles.css.map */
